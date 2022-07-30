@@ -1,0 +1,17 @@
+"use strict";
+var i= document.getElementById('square');
+var Length=prompt("Indicate a length of square side (in px): ",300);
+i.style.width=Length+"px";
+i.style.height=Length+"px";
+var Bgr=prompt("Indicate a background color (name of color): ","coral");
+i.style.backgroundColor=Bgr;
+i.style.lineHeight=Length+"px";
+var Bord=prompt("Indicate a thikness of square boarder (in px): ",1);
+var Col=prompt("Indicate a color of square boarder (name of color): ","black");
+i.style.border=Bord+"px solid "+Col;
+var El1=prompt("Indicate an element 1",0);
+var El2=prompt("Indicate an element 2",0);
+var Rez=parseFloat(El1)+parseFloat(El2);
+alert("Result is: "+Rez);
+document.getElementById('square').innerHTML=Rez;
+console.log(i);
