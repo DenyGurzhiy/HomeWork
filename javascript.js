@@ -1,10 +1,9 @@
-function getUserChoice(userinput) {
+const getUserChoice = userinput => {
     userinput = userinput.toLowerCase();
     if ((userinput === "rock") || (userinput === "paper") || (userinput === "scissors") || (userinput === "bomb")) {
         return userinput;
     }
 }
-
 function getComputerChoice() {
     switch (Math.floor(Math.random() * 3)) {
         case 0: return "rock";
@@ -71,8 +70,8 @@ function getWinnerPicture(Choice) {
 }
 
 function playGame() {
-    let userInput = prompt("Make your choice (rock/paper/scissors)");
-    let userChoice = getUserChoice(userInput);
+    let userinput = prompt("Make your choice (rock/paper/scissors)");
+    let userChoice = getUserChoice(userinput);
     let computerChoice = getComputerChoice();
     let playG = determineWinner(userChoice, computerChoice);
     document.getElementById('ImgUser').src = getResultPicture(userChoice);
