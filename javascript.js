@@ -74,11 +74,11 @@ function playGame() {
     let userInput = prompt("Make your choice (rock/paper/scissors)");
     let userChoice = getUserChoice(userInput);
     let computerChoice = getComputerChoice();
+    let playG = determineWinner(userChoice, computerChoice);
     document.getElementById('ImgUser').src = getResultPicture(userChoice);
     document.getElementById('ImgComp').src = getResultPicture(computerChoice);
-    document.getElementById('ImgRes').src = getWinnerPicture(determineWinner(userChoice, computerChoice));
     document.getElementById('res').innerHTML = "RESULT";
-    document.getElementById('winner').innerHTML = determineWinner(userChoice, computerChoice);
-    /* alert("USER choice is:   " + userInput + "\nCOMPUTER choice is:   " + computerChoice + "\n\t\t\t\t" + determineWinner(userChoice, computerChoice));*/
+    document.getElementById('ImgRes').src = getWinnerPicture(playG);
+    document.getElementById('winner').innerHTML = playG;
 }
 
