@@ -2,43 +2,35 @@
 <html lang="en">
 
 <head>
-   <title>My Home work Lesson 9</title>
+   <meta charset="utf-8" />
+   <title>My Home work Lesson 10</title>
    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-   <h1>MONTHS and SEASONS</h1>
-   <form id="form1">
-      <label for="Month">Number of month (1-12): </label>
-      <input id="Month" name="Month" type="number" value="1" min="1" max="12"><br>
-      <input type="submit" value="RESULT" class="RBtn">
-   </form>
-
-   <h1>MAX NUMBER</h1>
-   <form id="form2">
-      <label for="Num1">First number: </label>
-      <input id="Num1" name="Num1" type="number" value="0"><br>
-      <label for="Num2">Second number: </label>
-      <input id="Num2" name="Num2" type="number" value="0"><br>
-      <label for="Num3">Third number: </label>
-      <input id="Num3" name="Num3" type="number" value="0"><br>
-      <input type="submit" value="RESULT" class="RBtn">
-   </form>
-
-   <h1>Calculation form</h1>
-   <form id="form3">
-      <label for="element1">Element 1: </label>
-      <input id="element1" name="element1" type="number" value="0"><br>
-      <label><input id="Summ" name="operator" type="radio" value="Summ" checked>SUM</label><br>
-      <label><input id="Deduct" name="operator" type="radio" value="Deduct">DEDUCT</label><br>
-      <label><input id="Multiply" name="operator" type="radio" value="Multiply">MULTIPLY</label><br>
-      <label><input id="Divide" name="operator" type="radio" value="Divide">DIVIDE</label><br>
-      <label for="element2">Element 2: </label>
-      <input id="element2" name="element2" type="number" value="0"><br><br>
-      <input type="submit" value="RESULT" class="RBtn">
-      <input type="reset" value="RESET" class="RBtn">
-   </form>
-
+   <h1>ROCK SCISSORS PAPER</h1>
+   <div class="conteiner">
+      <div class="wrapper">
+         <div class="player user">
+            <div>USER</div>
+            <div><img class="Img" src="user.png" alt="Image user" /></div>
+         </div>
+         <div class="player computer">
+            <div>COMPUTER</div>
+            <div><img class="Img" src="computer.jpeg" alt="Image computer" /></div>
+         </div>
+         <div class="choice"><img class="Img inp" id="ImgUser" src="" alt="" /></div>
+         <div class="choice"><img class="Img inp" id="ImgComp" src="" alt="" /></div>
+         <div class="player result">
+            <div id="res"></div>
+            <div id="winner"></div>
+            <div><img class="Img res" id="ImgRes" src="letsplay.jpeg" alt="" /></div>
+         </div>
+         <div class="RBtn">
+            <button type="button" id="RBtn" onclick="playGame();">НАЧАТЬ ИГРУ</button>
+         </div>
+      </div>
+   </div>
 </body>
 
 <script src="./javascript.js"></script>

@@ -1,83 +1,84 @@
-const form1 = document.getElementById('form1');
-form1.addEventListener('submit', retriveFormValue1);
-function retriveFormValue1(event1) {
-    event1.preventDefault();
-    const Month = parseFloat(form1.querySelector('[name="Month"]').value);
-    let message
-    if ((Month <= 2) || (Month === 12)) {
-        message = "WINTER";
+function getUserChoice(userinput) {
+    userinput = userinput.toLowerCase();
+    if ((userinput === "rock") || (userinput === "paper") || (userinput === "scissors") || (userinput === "bomb")) {
+        return userinput;
     }
-    else if (Month <= 5) {
-        message = "SPRING";
-    }
-    else if (Month <= 8) {
-        message = "SUMMER";
-    }
-    else {
-        message = "AUTUMN";
-    }
-    let NameMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    alert(NameMonths[Month - 1] + " is a " + message + " month");
 }
 
-const form2 = document.getElementById('form2');
-form2.addEventListener('submit', retriveFormValue2);
-function retriveFormValue2(event2) {
-    event2.preventDefault();
-    let arr = [parseFloat(form2.querySelector('[name="Num1"]').value), parseFloat(form2.querySelector('[name="Num2"]').value), parseFloat(form2.querySelector('[name="Num3"]').value)];
-    if (arr[0] > arr[1]) {
-        if (arr[0] > arr[2]) {
-            alert("The first maximum value is " + arr[0]);
-        }
-        else {
-            alert("The first maximum value is " + arr[2]);
-        }
+function getComputerChoice() {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0: return "rock";
+        case 1: return "paper";
+        case 2: return "scissors";
     }
-    else if (arr[1] > arr[2]) {
-        alert("The first maximum value is " + arr[1]);
-    }
-    else if (arr[2] === arr[1] && arr[2] === arr[0]) {
-        alert("All values are equal");
-    }
-    else {
-        alert("The first maximum value is " + arr[2]);
-    }
-    console.log(arr);
-    console.log(arr[2]);
 }
 
-const form3 = document.getElementById('form3');
-form3.addEventListener('submit', retriveFormValue3);
-function retriveFormValue3(event3) {
-    event3.preventDefault();
-    const element1 = form3.querySelector('[name="element1"]'),
-        operator = form3.querySelector('input[name="operator"]:checked'),
-        element2 = form3.querySelector('[name="element2"]');
-    const
-        datas = {
-            Elm1: parseFloat(element1.value),
-            Oper: operator.value,
-            Elm2: parseFloat(element2.value)
-        };
-    let r
-    switch (datas.Oper) {
-        case "Summ": r = datas.Elm1 + datas.Elm2;
-            alert("The SUM of elements is: " + r);
-            break;
-        case "Deduct": r = datas.Elm1 - datas.Elm2;
-            alert("The RESIDUAL of elements is: " + r);
-            break;
-        case "Multiply": r = datas.Elm1 * datas.Elm2;
-            alert("The PRODUCT of elements is: " + r);
-            break;
-        case "Divide": if (datas.Elm2 === 0) {
-            alert("ERROR. Divisor must not be a zero!");
-            break;
-        }
-        else {
-            r = datas.Elm1 / datas.Elm2;
-            alert("The QUOTIENT of elements is: " + r);
-            break;
+function determineWinner(userChoice, computerChoice) {
+    let winner;
+    if (userChoice != undefined) {
+        switch (userChoice) {
+            case "bomb": winner = "You are a WINNER!";
+                break;
+            case computerChoice: winner = "The game result is a TIE!";
+                break;
+            case "rock": (computerChoice === "paper") ? winner = "COMPUTER is a WINNER!" : winner = "You are a WINNER!";
+                break;
+            case "scissors": (computerChoice === "rock") ? winner = "COMPUTER is a WINNER!" : winner = "You are a WINNER!";
+                break;
+            case "paper": (computerChoice === "scissors") ? winner = "COMPUTER is a WINNER!" : winner = "You are a WINNER!";
+                break;
         }
     }
+    else {
+        winner = "ERROR!\nUSER should input one of the following words:\nRock, Paper, Scissors!";
+    }
+    return winner;
 }
+
+function getResultPicture(Choice) {
+    let image;
+    if (Choice != undefined) {
+        switch (Choice) {
+            case "bomb": image = "bomb.jpeg";
+                break;
+            case "rock": image = "rock.jpeg";
+                break;
+            case "scissors": image = "scissors.jpeg";
+                break;
+            case "paper": image = "paper.jpeg";
+                break;
+        }
+    }
+    else {
+        image = "error.jpeg";
+    }
+    return image;
+}
+
+function getWinnerPicture(Choice) {
+    let image;
+    switch (Choice) {
+        case "You are a WINNER!": image = "user.png";
+            break;
+        case "The game result is a TIE!": image = "tie1.jpeg";
+            break;
+        case "COMPUTER is a WINNER!": image = "computer.jpeg";
+            break;
+        case "ERROR!\nUSER should input one of the following words:\nRock, Paper, Scissors!": image = "error.jpeg";
+            break;
+    }
+    return image;
+}
+
+function playGame() {
+    let userInput = prompt("Make your choice (rock/paper/scissors)");
+    let userChoice = getUserChoice(userInput);
+    let computerChoice = getComputerChoice();
+    document.getElementById('ImgUser').src = getResultPicture(userChoice);
+    document.getElementById('ImgComp').src = getResultPicture(computerChoice);
+    document.getElementById('ImgRes').src = getWinnerPicture(determineWinner(userChoice, computerChoice));
+    document.getElementById('res').innerHTML = "RESULT";
+    document.getElementById('winner').innerHTML = determineWinner(userChoice, computerChoice);
+    /* alert("USER choice is:   " + userInput + "\nCOMPUTER choice is:   " + computerChoice + "\n\t\t\t\t" + determineWinner(userChoice, computerChoice));*/
+}
+
