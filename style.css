@@ -59,7 +59,7 @@ h1 {
 }
 
 .choice {
-   display: flex;
+   display: none;
    flex-direction: column;
    max-height: 180px;
    align-items: center;

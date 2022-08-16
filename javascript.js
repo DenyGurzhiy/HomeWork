@@ -36,6 +36,8 @@ function determineWinner(userChoice, computerChoice) {
 
 function getResultPicture(Choice) {
     let image;
+    document.getElementsByClassName('choice')[0].style.display = "flex";
+    document.getElementsByClassName('choice')[1].style.display = "flex";
     if (Choice != undefined) {
         switch (Choice) {
             case "bomb": image = "bomb.jpeg";
@@ -79,5 +81,6 @@ function playGame() {
     document.getElementById('res').innerHTML = "RESULT";
     document.getElementById('ImgRes').src = getWinnerPicture(playG);
     document.getElementById('winner').innerHTML = playG;
+    document.getElementById('RBtn').innerHTML = "PLAY AGAIN";
 }
 
