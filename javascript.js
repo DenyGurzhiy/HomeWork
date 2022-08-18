@@ -59,7 +59,7 @@ function retriveFormValue3(event3) {
             Oper: operator.value,
             Elm2: parseFloat(element2.value)
         };
-    let r
+    let r;
     switch (datas.Oper) {
         case "Summ": r = datas.Elm1 + datas.Elm2;
             alert("The SUM of elements is: " + r);
