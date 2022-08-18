@@ -71,13 +71,23 @@ function retriveFormValue3(event3) {
             alert("The PRODUCT of elements is: " + r);
             break;
         case "Divide": if (datas.Elm2 === 0) {
-            alert("ERROR. Divisor must not be a zero!");
-            break;
-        }
-        else {
-            r = datas.Elm1 / datas.Elm2;
+            r = divisionByZero(datas.Elm1);
             alert("The QUOTIENT of elements is: " + r);
             break;
         }
+    }
+}
+function divisionByZero(Elm1) {
+    const form3 = document.getElementById('form3');
+    alert("ERROR. Divisor must not be a zero!");
+    let Elm2 = parseFloat(prompt("ReInput Element 2:", form3.querySelector('input[name="element2"]').value));
+    form3.querySelector('input[name="element2"]').value = Elm2;
+    if (Elm2 === 0) {
+        return divisionByZero(Elm1);
+    }
+    else {
+        let r = Elm1 / Elm2;
+        console.log(r);
+        return r;
     }
 }
