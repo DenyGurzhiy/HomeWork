@@ -87,7 +87,6 @@ function divisionByZero(Elm1) {
     }
     else {
         let r = Elm1 / Elm2;
-        console.log(r);
         return r;
     }
 }
