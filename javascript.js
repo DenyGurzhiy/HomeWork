@@ -3,6 +3,10 @@ const getUserChoice = userinput => {
     if ((userinput === "rock") || (userinput === "paper") || (userinput === "scissors") || (userinput === "bomb")) {
         return userinput;
     }
+    alert("ERROR! USER should input one of the following words: Rock, Paper, Scissors!");
+    userinput = getUserInput();
+    console.log(userinput);
+    return getUserChoice(userinput);
 }
 function getComputerChoice() {
     switch (Math.floor(Math.random() * 3)) {
@@ -71,8 +75,12 @@ function getWinnerPicture(Choice) {
     return image;
 }
 
+const getUserInput = () => prompt("Make your choice (rock/paper/scissors)");
+
 function playGame() {
-    let userinput = prompt("Make your choice (rock/paper/scissors)");
+    // const getUserInput = () => prompt("Make your choice (rock/paper/scissors)");
+    let userinput = getUserInput();
+    console.log(userinput);
     let userChoice = getUserChoice(userinput);
     let computerChoice = getComputerChoice();
     let playG = determineWinner(userChoice, computerChoice);
