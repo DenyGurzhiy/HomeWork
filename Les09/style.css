@@ -1,0 +1,63 @@
+body {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   -webkit-appearance: none;
+   font-size: 12pt;
+}
+
+#form1 {
+   border: 1px solid grey;
+   padding: 20px;
+   border-radius: 20px;
+   max-width: 400px;
+   background-color: rgb(215, 239, 250);
+}
+
+#form2 {
+   border: 1px solid grey;
+   padding: 20px;
+   border-radius: 20px;
+   max-width: 400px;
+   background-color: rgb(215, 239, 250);
+}
+
+#form3 {
+   border: 1px solid grey;
+   padding: 20px;
+   border-radius: 20px;
+   max-width: 400px;
+   background-color: rgb(215, 239, 250);
+}
+
+input[type="number"] {
+   font-size: 12pt;
+   padding: 3px;
+   border: 1px solid rgb(104, 114, 149);
+   border-radius: 15px;
+   height: 30px;
+   text-align: center;
+   width: 100px;
+   box-shadow: 1px 1px 10px #888888;
+   margin-left: 40px;
+}
+
+label {
+   display: inline-block;
+   min-width: 140px;
+   margin: 15px;
+   font-size: 12pt;
+
+}
+
+.RBtn {
+   height: 35px;
+   font-size: 15pt;
+   cursor: pointer;
+   font-weight: bold;
+   text-align: center;
+   min-width: 110px;
+   border: 1px solid rgb(104, 114, 149);
+   border-radius: 25px;
+   background-color: lavender;
+   box-shadow: 1px 1px 10px #888888;
+   margin: 10px;
+}
