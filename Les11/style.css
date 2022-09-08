@@ -1,0 +1,16 @@
+body {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   -webkit-appearance: none;
+   font-size: 12pt;
+}
+
+h1 {
+   text-align: center;
+}
+
+li {
+   font-size: 24px;
+   font-family: 'Arial', sans-serif;
+   list-style-type: '✓';
+   padding-left: 15px;
+}
