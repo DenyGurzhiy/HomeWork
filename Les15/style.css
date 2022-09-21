@@ -1,0 +1,12 @@
+li {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    list-style-type: '*';
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+#CatPic {
+    max-width: 300px;
+    max-height: 300px;
+}
