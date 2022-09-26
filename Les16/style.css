@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+}
+
+label {
+    font-size: 18px;
+}
+
+legend {
+    background-color: #D3D3D3;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+fieldset {
+    border-radius: 15px;
+    max-width: 540px;
+}
+
+button {
+    border-radius: 5px;
+    text-align: center;
+    min-width: 150px;
+    min-height: 40px;
+
+}
+
+select,
+input {
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    justify-items: start
+        /* grid-template-rows: minmax(auto, 500px); */
+}
+
+.label {
+    margin: 10px;
+}
+
+.select,
+.input {
+    margin: 10px;
+}
+
+.button {
+    justify-self: center;
+}

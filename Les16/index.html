@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My Home work Lesson 16</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>VISITORS' PREFERERNCES</h1>
+    <form method="POST" action="https://httpbin.org/post">
+        <fieldset>
+            <legend> About cats</legend>
+            <div class="wrap">
+                <div class="label">
+                    <label for="breed_select">Favorite cat breed:</label>
+                </div>
+                <div class="select">
+                    <select name="catBreed" id="breed_select" required>
+                        <option value="">--Please choose an option--</option>
+                    </select>
+                </div>
+                <div class="label">
+                    <label for="catNumber">How many cats have you had:</label>
+                </div>
+                <div class="input">
+                    <input id="catNumber" type="number" name="catNumber" min="0" value="0">
+                </div>
+                <div class="label">
+                    <label for="catName">Favorite cat name:</label>
+                </div>
+                <div class="input">
+                    <input id="catName" type="text" name="catName" required pattern="^[A-Z]\D+">
+                </div>
+                <div class="button">
+                    <button type="submit">Send request</button>
+                </div>
+                <div class="button">
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script src="./les16.js"></script>
+
+</html>
