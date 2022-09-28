@@ -18,5 +18,4 @@ fetch('https://catfact.ninja/breeds?limit=10', {
             Sel.appendChild(SelOpt);
             console.log(breed.breed);
         }
-
     });
