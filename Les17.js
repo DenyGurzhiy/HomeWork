@@ -34,7 +34,7 @@ form1.onsubmit = function submit(event) {
     const formData = new FormData(form1);
     const name = formData.get('name') || '';
     const debtor = formData.get('debtor') || '';
-    const amount = formData.get('amount') || '';
+    const amount = parseFloat(formData.get('amount') || '').toFixed(2);
     const dueDate = formData.get('dueDate') || '';
     AddRefund(name, debtor, amount, dueDate);
     form1.reset();
@@ -66,7 +66,7 @@ async function AddRefund(name, debtor, amount, dueDate) {
             })
         });
         if (resp.status >= 400) {
-            getStatus(`Error ${resp.status}`);
+            getStatus(`Error ${resp.status} ${resp.message}`);
             return Promise.reject(resp);
         }
         else if (resp.status = 200) {
