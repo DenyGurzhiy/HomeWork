@@ -31,7 +31,7 @@ h1 {
     justify-items: center;
     border-radius: 15px;
     border: 1px solid #cad8f1;
-    min-width: 765px;
+    min-width: 800px;
     margin: 10px;
     box-shadow: 1px 1px 10px #bfbfbf;
     padding: 5px;
@@ -44,7 +44,7 @@ h1 {
     border-radius: 15px;
     border: 1px solid #cad8f1;
     width: 100%;
-    min-width: 765px;
+    min-width: 800px;
     max-width: 1000px;
     margin: 10px;
     box-shadow: 1px 1px 10px #bfbfbf;
@@ -78,7 +78,7 @@ input {
     /* padding: 2px; */
     font-size: 16px;
     color: rgb(209, 207, 207);
-    width: 340px;
+    width: 318px;
     margin-top: 5px;
 }
 
@@ -105,7 +105,7 @@ fieldset {
     border: 1px solid #cad8f1;
     padding: 10px;
     margin: 10px;
-    width: 380px;
+    width: 358px;
 }
 
 
