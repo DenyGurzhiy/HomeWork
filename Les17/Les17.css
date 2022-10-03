@@ -1,0 +1,175 @@
+body {
+    font-family: sans-serif;
+    -webkit-appearance: none;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.generalWrapForm1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.generalWrapForm2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapForm1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    border-radius: 15px;
+    border: 1px solid #cad8f1;
+    min-width: 765px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px #bfbfbf;
+    padding: 5px;
+}
+
+.wrapForm2 {
+    display: grid;
+    grid-template-columns: 40% 20% 15% 15% 10%;
+    justify-items: center;
+    border-radius: 15px;
+    border: 1px solid #cad8f1;
+    width: 100%;
+    min-width: 765px;
+    max-width: 1000px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px #bfbfbf;
+    padding: 5px;
+}
+
+.wrapTableDatas {
+    grid-column: 1/6;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 40% 20% 15% 15% 10%;
+    min-width: 765px;
+    max-width: 1000px;
+    max-height: 500px;
+    overflow-x: auto;
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0061FF;
+
+}
+
+
+input {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    height: 30px;
+    /* padding: 2px; */
+    font-size: 16px;
+    color: rgb(209, 207, 207);
+    width: 340px;
+    margin-top: 5px;
+}
+
+.Img {
+    display: none;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.status {
+    font-size: 14px;
+    color: #72a6fb;
+    text-align: center;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+
+fieldset {
+    border-radius: 15px;
+    border: 1px solid #cad8f1;
+    padding: 10px;
+    margin: 10px;
+    width: 380px;
+}
+
+
+button {
+    border-radius: 8px;
+    text-align: center;
+    min-width: 130px;
+    min-height: 40px;
+    font-size: 15px;
+    color: #D7E6FF;
+    background-color: #0061FF;
+    border: 1px solid #0061FF;
+    margin: 10px;
+    box-shadow: 1px 1px 10px #888888;
+}
+
+.edtBtn {
+    min-height: 25px;
+    max-height: 30px;
+    min-width: 55px;
+    max-width: 100px;
+    font-size: 13px;
+    background-color: #07E5CC;
+    border: 1px solid #04ae9a;
+    color: #444646;
+    box-shadow: 1px 1px 5px #888888;
+    margin: 0px;
+}
+
+.butPostRef {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+.butGetRef {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    margin-bottom: 10px;
+}
+
+.tableHead {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #cad8f1;
+    border-radius: 15px;
+}
+
+.tableDatas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30px;
+    border: 1px solid #ced8e9;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: auto;
+    font-size: 13px;
+    color: #444646;
+}
+
+.Amount,
+.Date,
+.Edit {
+    text-align: center;
+    align-items: center;
+}
