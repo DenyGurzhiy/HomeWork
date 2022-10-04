@@ -1,4 +1,4 @@
-function focOn(atr) {
+function focusOn(atr) {
     atr.style.color = '#000000';
     const fld = document.getElementById(`fld${atr.name}`);
     fld.style.border = "1.5px solid #05E4CB";
@@ -8,9 +8,9 @@ function focOn(atr) {
     }
 }
 
-function focOff(atr) {
+function focusOff(atr) {
     const fld = document.getElementById(`fld${atr.name}`);
-    fld.style.border = "1px solid #cad8f1";
+    fld.style.border = "1.5px solid #cad8f1";
     const img = document.getElementById(`img${atr.name}`)
     if ((atr.value === "") || (atr.value == 0)) {
         switch (atr.name) {
