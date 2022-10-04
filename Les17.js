@@ -1,16 +1,8 @@
 function focusOn(atr) {
-    atr.style.color = '#000000';
-    const fld = document.getElementById(`fld${atr.name}`);
-    fld.style.border = "1.5px solid #05E4CB";
-    if ((atr.value === "Text") || (atr.value === "")) {
-        atr.value = "";
-        atr.style.color = '#000000'
-    }
+    if (atr.value === "Text") atr.value = "";
 }
 
 function focusOff(atr) {
-    const fld = document.getElementById(`fld${atr.name}`);
-    fld.style.border = "1.5px solid #cad8f1";
     const img = document.getElementById(`img${atr.name}`)
     if ((atr.value === "") || (atr.value == 0)) {
         switch (atr.name) {
@@ -19,36 +11,33 @@ function focusOff(atr) {
             case 'amount': atr.value = 0; break;
             case 'dueDate': atr.value = ""; break;
         }
-        atr.style.color = "#D3D3D3";
-        img.style.display = "none";
+        atr.classList.remove('valueExistData');
+        img.classList.remove('valueExistImg');
     }
     else {
-        atr.style.color = '#000000';
-        img.style.display = "inline-block";
+        atr.classList.add('valueExistData');
+        img.classList.add('valueExistImg');
     }
 }
 
 const form1 = document.getElementById('formAddRefund');
+console.log(form1);
 form1.onsubmit = function submit(event) {
     event.preventDefault();
     const formData = new FormData(form1);
-    const name = formData.get('name') || '';
+    const nam = formData.get('name') || '';
     const debtor = formData.get('debtor') || '';
     const amount = parseFloat(formData.get('amount') || '').toFixed(2);
     const dueDate = formData.get('dueDate') || '';
-    AddRefund(name, debtor, amount, dueDate);
+    AddRefund(nam, debtor, amount, dueDate);
     form1.reset();
-    fildReset();
-}
-
-function fildReset() {
-    const fildArr = ['name', 'debtor', 'amount', 'dueDate'];
-    fildArr.forEach(item => {
-        const fld = document.getElementById(item);
-        fld.style.color = "#D3D3D3";
+    const fieldArr = ['name', 'debtor', 'amount', 'dueDate'];
+    fieldArr.forEach(item => {
+        const field = document.getElementById(item);
+        field.classList.remove('valueExistData');
         const img = document.getElementById(`img${item}`);
-        img.style.display = "none";
-    })
+        img.classList.remove('valueExistImg');
+    });
 }
 
 async function AddRefund(name, debtor, amount, dueDate) {

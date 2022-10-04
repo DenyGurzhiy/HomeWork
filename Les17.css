@@ -33,6 +33,10 @@ h1 {
 
 }
 
+.wrapForm1:focus-within {
+    box-shadow: 1px 1px 15px #bfbfbf;
+}
+
 .wrapForm2 {
     display: grid;
     grid-template-columns: 40% 20% 15% 15% 10%;
@@ -92,8 +96,16 @@ input {
 
 input:focus {
     outline: none;
+    color: #000000;
 }
 
+.valueExistData {
+    color: #000000;
+}
+
+.valueExistImg {
+    display: inline-block;
+}
 
 fieldset {
     border-radius: 15px;
@@ -103,6 +115,9 @@ fieldset {
     min-width: 322px;
 }
 
+fieldset:focus-within {
+    border: 1.5px solid #05E4CB;
+}
 
 button {
     border-radius: 8px;
