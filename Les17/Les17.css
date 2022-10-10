@@ -42,7 +42,7 @@ h1 {
     grid-template-columns: 40% 20% 15% 15% 10%;
     justify-items: center;
     border-radius: 15px;
-    border: 1px solid #cad8f1;
+    border: 1px solid #CCDFFF;
     width: 100%;
     min-width: 730px;
     max-width: 1000px;
@@ -64,39 +64,62 @@ h1 {
 }
 
 label {
+    /* font-family: 'IBM Plex Sans'; */
+    font-style: normal;
+    font-weight: 600;
     font-size: 14px;
-    font-weight: bold;
+    line-height: 16px;
     color: #0061FF;
 
 }
 
 
 input {
-    border: 2px solid transparent;
-    border-radius: 5px;
+    /* font-family: 'IBM Plex Sans'; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #00003C;
+    border: none;
     height: 30px;
-    font-size: 16px;
-    color: rgb(209, 207, 207);
     min-width: 290px;
     margin-top: 5px;
 }
 
-.Img {
-    display: none;
-    width: 15px;
-    margin-left: 5px;
+input:valid+.check {
+    fill: #0061FF;
 }
+
+input::placeholder {
+    /* font-family: 'IBM Plex Sans'; */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #9999B1;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* input:placeholder-shown {
+
+    color: red;
+    font-weight: 600;
+} */
+
 
 .status {
     font-size: 14px;
     color: #72a6fb;
     text-align: center;
 
-}
-
-input:focus {
-    outline: none;
-    color: #000000;
 }
 
 .valueExistData {
@@ -108,15 +131,15 @@ input:focus {
 }
 
 fieldset {
-    border-radius: 15px;
-    border: 1.5px solid #cad8f1;
+    border: 1px solid #CCDFFF;
+    border-radius: 8px;
     padding: 10px;
     margin: 10px;
     min-width: 322px;
 }
 
 fieldset:focus-within {
-    border: 1.5px solid #05E4CB;
+    border: 3px solid #00E4CA;
 }
 
 button {

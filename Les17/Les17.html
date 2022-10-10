@@ -20,8 +20,12 @@
                             <label for="name">Name</label>
                         </div>
                         <div class="input">
-                            <input id="name" name="name" type="text" value="Text" onfocus="focusOn(this)"
-                                onblur="focusOff(this)" required><img id="imgname" class="Img" src="Okk.png" alt="" />
+                            <input id="name" name="name" type="text" placeholder="Input text" required>
+                            <svg class="check" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.6585 0.247422C22.0741 0.611104 22.1163 1.24287 21.7526 1.6585L7.75258 17.6585C7.57032 17.8668 7.30989 17.9902 7.03328 17.9994C6.75666 18.0087 6.4886 17.9028 6.29289 17.7071L0.292893 11.7071C-0.0976311 11.3166 -0.0976311 10.6834 0.292893 10.2929C0.683417 9.90237 1.31658 9.90237 1.70711 10.2929L6.95129 15.5371L20.2474 0.341494C20.6111 -0.0741428 21.2429 -0.11626 21.6585 0.247422Z" />
+                            </svg>
                         </div>
                     </fieldset>
                 </div>
@@ -31,9 +35,13 @@
                             <label for="amount">Amount</label>
                         </div>
                         <div class="input">
-                            <input id="amount" name="amount" type="number" min=0.01 step="0.01" value=0
-                                onfocus="focusOn(this)" onblur="focusOff(this)" required><img id="imgamount" class="Img"
-                                src="Okk.png" alt="" />
+                            <input id="amount" name="amount" type="number" min=0.01 step="0.01" placeholder="Number"
+                                required>
+                            <svg class="check" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.6585 0.247422C22.0741 0.611104 22.1163 1.24287 21.7526 1.6585L7.75258 17.6585C7.57032 17.8668 7.30989 17.9902 7.03328 17.9994C6.75666 18.0087 6.4886 17.9028 6.29289 17.7071L0.292893 11.7071C-0.0976311 11.3166 -0.0976311 10.6834 0.292893 10.2929C0.683417 9.90237 1.31658 9.90237 1.70711 10.2929L6.95129 15.5371L20.2474 0.341494C20.6111 -0.0741428 21.2429 -0.11626 21.6585 0.247422Z" />
+                            </svg>
                         </div>
                     </fieldset>
                 </div>
@@ -43,8 +51,12 @@
                             <label for="debtor">Debtor</label>
                         </div>
                         <div class="input">
-                            <input id="debtor" name="debtor" type="text" value="Text" onfocus="focusOn(this)"
-                                onblur="focusOff(this)" required><img id="imgdebtor" class="Img" src="Okk.png" alt="" />
+                            <input id="debtor" name="debtor" type="text" placeholder="Input text" required>
+                            <svg class="check" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.6585 0.247422C22.0741 0.611104 22.1163 1.24287 21.7526 1.6585L7.75258 17.6585C7.57032 17.8668 7.30989 17.9902 7.03328 17.9994C6.75666 18.0087 6.4886 17.9028 6.29289 17.7071L0.292893 11.7071C-0.0976311 11.3166 -0.0976311 10.6834 0.292893 10.2929C0.683417 9.90237 1.31658 9.90237 1.70711 10.2929L6.95129 15.5371L20.2474 0.341494C20.6111 -0.0741428 21.2429 -0.11626 21.6585 0.247422Z" />
+                            </svg>
                         </div>
                     </fieldset>
                 </div>
@@ -54,9 +66,41 @@
                             <label for="dueDate">Date</label>
                         </div>
                         <div class="input">
-                            <input id="dueDate" name="dueDate" type="date" onfocus="focusOn(this)"
-                                onblur="focusOff(this)" required><img id="imgdueDate" class="Img" src="Okk.png"
-                                alt="" />
+                            <input id="dueDate" name="dueDate" type="text" placeholder="Select data"
+                                onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                            <svg class="calendar" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 12.5C18 13.3284 17.3284 14 16.5 14C15.6716 14 15 13.3284 15 12.5C15 11.6716 15.6716 11 16.5 11C17.3284 11 18 11.6716 18 12.5Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M21.5 14C22.3284 14 23 13.3284 23 12.5C23 11.6716 22.3284 11 21.5 11C20.6716 11 20 11.6716 20 12.5C20 13.3284 20.6716 14 21.5 14Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M18 17.5C18 18.3284 17.3284 19 16.5 19C15.6716 19 15 18.3284 15 17.5C15 16.6716 15.6716 16 16.5 16C17.3284 16 18 16.6716 18 17.5Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M21.5 19C22.3284 19 23 18.3284 23 17.5C23 16.6716 22.3284 16 21.5 16C20.6716 16 20 16.6716 20 17.5C20 18.3284 20.6716 19 21.5 19Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M8 17.5C8 18.3284 7.32843 19 6.5 19C5.67157 19 5 18.3284 5 17.5C5 16.6716 5.67157 16 6.5 16C7.32843 16 8 16.6716 8 17.5Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M11.5 19C12.3284 19 13 18.3284 13 17.5C13 16.6716 12.3284 16 11.5 16C10.6716 16 10 16.6716 10 17.5C10 18.3284 10.6716 19 11.5 19Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M8 22.5C8 23.3284 7.32843 24 6.5 24C5.67157 24 5 23.3284 5 22.5C5 21.6716 5.67157 21 6.5 21C7.32843 21 8 21.6716 8 22.5Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M11.5 24C12.3284 24 13 23.3284 13 22.5C13 21.6716 12.3284 21 11.5 21C10.6716 21 10 21.6716 10 22.5C10 23.3284 10.6716 24 11.5 24Z"
+                                    fill="#0061FF" />
+                                <path
+                                    d="M18 22.5C18 23.3284 17.3284 24 16.5 24C15.6716 24 15 23.3284 15 22.5C15 21.6716 15.6716 21 16.5 21C17.3284 21 18 21.6716 18 22.5Z"
+                                    fill="#0061FF" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6 0.25C6.41421 0.25 6.75 0.585786 6.75 1V2H21.25V1C21.25 0.585786 21.5858 0.25 22 0.25C22.4142 0.25 22.75 0.585786 22.75 1V2H24C26.2091 2 28 3.79086 28 6V24C28 26.2091 26.2091 28 24 28H4C1.79086 28 0 26.2091 0 24V6C0 3.79086 1.79086 2 4 2H5.25V1C5.25 0.585786 5.58579 0.25 6 0.25ZM2 6C2 4.89543 2.89543 4 4 4H24C25.1046 4 26 4.89543 26 6V7H2V6ZM2 9V24C2 25.1046 2.89543 26 4 26H24C25.1046 26 26 25.1046 26 24V9H2Z"
+                                    fill="#0061FF" />
+                            </svg>
                         </div>
                     </fieldset>
                 </div>

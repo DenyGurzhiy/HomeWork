@@ -1,25 +1,3 @@
-function focusOn(atr) {
-    if (atr.value === "Text") atr.value = "";
-}
-
-function focusOff(atr) {
-    const img = document.getElementById(`img${atr.name}`)
-    if ((atr.value === "") || (atr.value == 0)) {
-        switch (atr.name) {
-            case 'name': atr.value = "Text"; break;
-            case 'debtor': atr.value = "Text"; break;
-            case 'amount': atr.value = 0; break;
-            case 'dueDate': atr.value = ""; break;
-        }
-        atr.classList.remove('valueExistData');
-        img.classList.remove('valueExistImg');
-    }
-    else {
-        atr.classList.add('valueExistData');
-        img.classList.add('valueExistImg');
-    }
-}
-
 const form1 = document.getElementById('formAddRefund');
 console.log(form1);
 form1.onsubmit = function submit(event) {
@@ -31,13 +9,6 @@ form1.onsubmit = function submit(event) {
     const dueDate = formData.get('dueDate') || '';
     AddRefund(nam, debtor, amount, dueDate);
     form1.reset();
-    const fieldArr = ['name', 'debtor', 'amount', 'dueDate'];
-    fieldArr.forEach(item => {
-        const field = document.getElementById(item);
-        field.classList.remove('valueExistData');
-        const img = document.getElementById(`img${item}`);
-        img.classList.remove('valueExistImg');
-    });
 }
 
 async function AddRefund(name, debtor, amount, dueDate) {
