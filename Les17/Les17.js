@@ -76,6 +76,7 @@ async function editListRef(idEdit) {
 
 async function createListRef() {
     const datas = await getRefund();
+    console.log(datas);
     const tableDatas = document.getElementById('wrapTableDatas');
     tableDatas.replaceChildren();
     datas.Items.sort((a, b) => {
